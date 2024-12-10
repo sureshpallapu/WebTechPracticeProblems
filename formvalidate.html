@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <button type="submit">Register</button>
+        <p id="errorMessages" class="error"></p>
+    </form>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission for validation
+            
+            // Collect form inputs
+            const username = document.getElementById("username").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+            const errorMessages = document.getElementById("errorMessages");
+            let errors = [];
+
+            // Validation rules
+            if (username === "") {
+                errors.push("Username is required.");
+            }
+            if (email === "") {
+                errors.push("Email is required.");
+            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                errors.push("Enter a valid email address.");
+            }
+            if (password === "") {
+                errors.push("Password is required.");
+            } else if (password.length < 6) {
+                errors.push("Password must be at least 6 characters long.");
+            }
+
+            // Display errors or submit the form
+            if (errors.length > 0) {
+                errorMessages.innerHTML = errors.join("<br>");
+            } else {
+                errorMessages.innerHTML = "";
+                alert("Form submitted successfully!");
+                this.submit(); // Uncomment if you want the form to actually submit
+            }
+        });
+    </script>
+</body>
+</html>

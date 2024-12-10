@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Basic HTML Document</title>
+<style>
+p{
+color:gray;
+}
+</style>
+</head>
+<body>
+<p style="color: red;">This is red text.</p>
+
+
+    <h1 style="color:green">Fruits</h1>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Citrus
+            <ol start="20">
+                <li>Orange</li>
+                <li>Lemon</li>
+            </ol>
+        </li>
+    </ul>
+<table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+ <tr>
+            <td>Alice</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>88</td>
+        </tr>
+    </table>
+<h1>Contact Us</h1>
+    <form>
+        <label for="email">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+       
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+<h1>My Favorite Place</h1>
+    <img src="https://via.placeholder.com/300" alt="Sample Image">
+
+<h1>Useful Links</h1>
+    <p>Visit <a href="https://www.wikipedia.org">Wikipedia</a> for more information.</p>
+    <p>Go to <a href="#section1">Section 1</a> within this page.</p>
+    <h2 id="section1">Section 1</h2>
+    <p>This is Section 1.</p>
+ <h1>Video Preview</h1>
+    <video controls width="600" poster="thumbnail.jpg">
+        <source src="example.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+<video controls>
+    <source src="example.mp4" type="video/mp4">
+    <source src="example.ogg" type="video/ogg">
+    Your browser does not support the video tag. 
+    <a href="example.mp4">Download the video</a>.
+</video>
+
+ <h1>Listen to This Song</h1>
+    <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+        <source src="song.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+    <frame src="left.html">
+    <frame src="right.html">
+</frameset>
+</body>
+</html>
