@@ -20,6 +20,7 @@ This repository serves as a hands-on resource for anyone looking to improve thei
 - **Full-Stack Projects**: Combine frontend and backend skills to build complete web applications.
 - **Practice Problems**: A variety of tasks categorized by difficulty level.
 
+
 ---
 
 ## 🚀 Installation
