@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-content {
+      padding: 15px;
+    }
+    .card h3 {
+      margin: 0;
+      color: #333;
+    }
+    .card p {
+      color: #777;
+    }
+    .card button {
+      margin-top: 10px;
+      padding: 10px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .card button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Card Image">
+      <div class="card-content">
+        <h3>Card Title</h3>
+        <p>Some description about this card goes here.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/300x200" alt="Card Image">
+      <div class="card-content">
+        <h3>Card Title</h3>
+        <p>Some description about this card goes here.</p>
+        <button>Read More</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
