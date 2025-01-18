@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    .menu {
+      display: flex;
+    }
+    @media (max-width: 600px) {
+      .menu {
+        flex-direction: column;
+        display: none;
+      }
+      .menu.active {
+        display: flex;
+      }
+      .hamburger {
+        cursor: pointer;
+        font-size: 20px;
+        color: white;
+        border: none;
+        background: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#">Logo</a>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+  <script>
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
